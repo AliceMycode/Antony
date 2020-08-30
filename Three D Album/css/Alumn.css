@@ -1,59 +1,63 @@
-        * {
-            padding: 0px;
-            margin: 0px;
-        }
-        body {
-            background: #40E0D0;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(-45deg, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */            
-            animation: moving 20s linear infinite;
-            background-size: 500% 500%;
-            overflow: hidden;
-        }
-        @keyframes moving {
-            0%{
-                background-position: 0 50%;
+            * {
+                padding: 0px;
+                margin: 0px;
             }
-            50%{
-                background-position: 100% 50%;
+            body {
+                background: linear-gradient(-45deg,#ee6654, #e71c6e, #2396d5, #23c5ab);
+                animation: moving 12s linear infinite;
+                background-size: 400% 400%;
+                overflow: hidden;
             }
-            100%{
-                background-position: 0 50%;
+            @keyframes moving {
+                0%{
+                    background-position: 0 50%;
+                }
+                50%{
+                    background-position: 100% 50%;
+                }
+                100%{
+                    background-position: 0 50%;
+                }
             }
-        }
-        #wrapper img {
-            width: 160px;
-            height: 250px;
-            position: absolute;
-            padding: 5px;
-            border: 2px solid yellow;
-            border-radius: 10px;
-            background: gold;
-        }
-        #wrapper {
-            width: 150px;
-            height: 200px;
-            position: relative;
-            margin: 200px auto;
-            border: 1px solid pink;
-            transform-style: preserve-3d;
-            transform: rotateX(-9deg);
-            animation: rotate 20s linear 5s infinite;
-        }
-        @keyframes rotate {
-             0%{
-                transform: rotateX(-9deg) rotateY(1000deg) rotateZ(1000deg);
-                perspective: 2000px;
+            #wrapper img {
+                    position: absolute;
+                    width: 200px;
+                    height: 300px; 
+                    top: 0;  
+                    -webkit-box-reflect: below 5px -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, .5) 100%);
+                    border: 1px solid rgb(246, 241, 241);
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+            #wrapper {
+                    width: 200px;
+                    height: 300px;
+                    position: relative;
+                    border: 1px solid rgb(246, 241, 241);
+                    margin: 110px auto;
+                    transform-style: preserve-3d;
+                    transform: rotateX(-16deg);
+                    animation: rotate 20s linear 2s infinite;
+                 
             }
-            50%{
-                transform: rotateX(0deg) rotateY(0deg);
-                perspective: 500px;
-            } 
-             100%{
-                transform: rotateX(0deg) rotateY(1000deg);
-                perspective: 2000px;
-            } 
-        }
-        .perspective {
-            perspective: 2000px;
-        }
+            @keyframes rotate {
+                0%{
+                    transform: rotateX(-16deg) rotateY(0deg);
+                }
+                25%{
+                    transform: rotateX(50deg) rotateY(180deg);
+                }
+                50%{
+                    transform: rotateX(0deg) rotateY(-360deg);
+                }
+                75%{
+                    transform: rotateX(-50deg) rotateY(-360deg) rotateZ(180deg);
+                }
+                100%{
+                    transform: rotateX(-16deg) rotateY(0deg) ;
+                }
+               
+            }
+            .perspective {
+                perspective: 1000px;
+            }
