@@ -1,0 +1,123 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body,html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#wrapper {
+    width: 190px;
+    height: 110px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 800px;
+    transform: translate(-50%,-50%);
+}
+#wrapper #cubeBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: move 8s linear infinite;
+}
+#wrapper #cubeBox video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+/* bigcube */
+#wrapper #cubeBox div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: all 0.5s;
+}
+#wrapper #cubeBox div:nth-child(1) {
+        transform: translateZ(95px);
+}
+#wrapper #cubeBox div:nth-child(2) {
+    transform: translateZ(-95px);
+}
+#wrapper #cubeBox div:nth-child(3) {
+    transform: rotateY(-90deg) translateZ(95px);
+}
+#wrapper #cubeBox div:nth-child(4) {
+    transform: rotateY(90deg) translateZ(95px);
+}
+#wrapper #cubeBox div:nth-child(5) {
+    transform: rotateX(90deg) translateZ(100px);
+}
+#wrapper #cubeBox div:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+/* 鼠标移过 */
+#wrapper #cubeBox:hover div:nth-child(1) {
+    transform: translateZ(185px);
+}
+#wrapper #cubeBox:hover div:nth-child(2) {
+transform: translateZ(-185px);
+}
+#wrapper #cubeBox:hover div:nth-child(3) {
+transform: rotateY(-90deg) translateZ(185px);
+}
+#wrapper #cubeBox:hover div:nth-child(4) {
+transform: rotateY(90deg) translateZ(185px);
+}
+#wrapper #cubeBox:hover div:nth-child(5) {
+transform: rotateX(90deg) translateZ(185px);
+}
+#wrapper #cubeBox:hover div:nth-child(6) {
+transform: rotateX(-90deg) translateZ(185px);
+}
+
+
+/* smallcube */
+#wrapper #cubeBox i {
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -45px;
+}
+#wrapper #cubeBox .small-Front {
+    transform: translateZ(45px);
+}
+#wrapper #cubeBox .small-Back {
+transform: translateZ(-45px);
+}
+#wrapper #cubeBox .small-Left {
+transform: rotateY(-90deg) translateZ(45px);
+}
+#wrapper #cubeBox .small-Right {
+transform: rotateY(90deg) translateZ(45px);
+}
+#wrapper #cubeBox .small-Top {
+transform: rotateX(-90deg) translateZ(50px);
+}
+#wrapper #cubeBox .small-Bottom {
+transform: rotateX(90deg) translateZ(50px);
+}
+/* 背景 */
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+}
+/* 动画 */
+@keyframes move {
+    0% {
+      transform: rotateX(-20deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(-20deg) rotateY(360deg);
+    }
+  }
