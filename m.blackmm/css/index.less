@@ -1,0 +1,212 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #f2f4f7;
+}
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px!important;
+    }
+}
+a {
+    text-decoration: none;
+    color: #707070;
+}
+.wrap {
+    background-color: #ffffff;
+    padding-bottom: 1.146667rem;
+}
+//header
+.header {
+    box-sizing: border-box;
+    height: 2.133333rem;
+    color: #1c1c1c;
+    font-size: 0.933333rem;
+    text-align: center;
+    line-height: 2.133333rem;
+    border-bottom: 0.026667rem solid #eaeaea;
+}
+//nav
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.2rem 0 60px 0;
+    a {
+        flex: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 3.706667rem;
+            height: 3.706667rem;
+        }
+        span {
+            font-size: 0.666667rem;
+        }
+        &:nth-child(-n + 3) {
+            margin-bottom: 1.653333rem;
+        }
+    }
+}
+.go {
+    margin: 0 0.266667rem 0 0.48rem;
+}
+.content {
+    padding: 1.066667rem 0.64rem;
+    background-color: #ffffff;
+    margin-top: 0.266667rem;
+    .con-hd {
+        line-height: 1.013333rem;
+        display: flex;
+        justify-content: space-between;
+        height: 1.013333rem;
+        margin-bottom: 0.906667rem;
+        h4 {
+            margin: 0px;
+            font-size: 0.746667rem;
+            color: #333333;
+            .icon {
+                display: inline-block;
+                width: 1.013333rem;
+                height: 1.013333rem;
+                //实现行内块元素与后面文字垂直居中
+                vertical-align: middle;
+            }
+        }
+        .more {
+            font-size: 0.586667rem;
+            color: #999999;
+            line-height: 1.013333rem;
+        }
+    }
+}
+//focus
+.focus {
+    position: relative ;
+    .swiper-container {
+        width: 14.4rem;
+        height: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        border-radius: 0.8rem;
+        transition: 300ms;
+        //其余兄弟是0.8
+        opacity: 0.5;
+        transform: scale(0.8);
+        a {
+            width: 9.013333rem;
+            height: 10.026667rem;
+            border-radius: 0.8rem;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.8rem;
+            }
+        }
+        p {
+            width: 9.013333rem;
+            font-size: 0.666667rem;
+            margin-top: 0.64rem;
+            color: #333333;
+        }
+      }
+      //当前兄弟是1
+      .swiper-slide-active,.swiper-slide-duplicate-active{
+        transform: scale(1);
+        z-index: 10;
+        opacity: 1;
+      }
+}
+//充电模块轮播css
+.study {
+    .focus_study {
+        padding: 0.266667rem;
+    }
+      .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+        width: 7.733333rem;
+        height: 9.066667rem;
+        background-color: #fff;
+        border-radius: 0.266667rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        flex-direction: column;
+        h5 {
+            font-weight: normal;
+            margin: 0.533333rem 0;
+            font-size: 0.693333rem;
+            padding: 0 0.266667rem;
+        }
+        p {
+            font-size: 0.693333rem;
+            color: #ff4400;
+            padding: 0 0.266667rem;
+        }
+        img {
+            height: 4.56rem;
+            border-radius: 0.266667rem;
+        }
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        justify-content: flex-start;
+      }
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.933333rem;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    padding: 0.533333rem;
+    background-color: #fff;
+    border-top: 0.026667rem solid #1c1c1c;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        img {
+            width: 1.04rem;
+            height: 1.066667rem;
+        }
+        span {
+            display: inline-block;
+            color: #666666;
+            font-size: 0.586667rem;
+            margin-top: 0.266667rem;
+        }
+    }
+}
+.focus_bottom {
+    padding-bottom: 3.733333rem;
+  }
